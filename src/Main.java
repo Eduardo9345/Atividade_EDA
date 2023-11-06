@@ -1,7 +1,7 @@
 
 public class Main {
 	public static void main(String[] args) {
-		ListaOrdenadaComNoDescritor  lista = new ListaOrdenadaComNoDescritor(new No(19));
+		ListaOrdenadaComNoDescritor  lista = new ListaOrdenadaComNoDescritor();
 
 		lista.inserirOrdenado(20);
 		lista.inserirOrdenado(21);
@@ -10,6 +10,9 @@ public class Main {
 		lista.inserirOrdenado(16);
 		lista.inserirOrdenado(15);
 		lista.inserirOrdenado(7);
+		lista.inserirOrdenado(22);
+		lista.imprimir();
+		
 		lista.removerDoFinal();
 		lista.imprimir();
 		lista.remover(3);

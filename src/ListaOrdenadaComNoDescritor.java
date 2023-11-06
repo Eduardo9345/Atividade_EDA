@@ -5,8 +5,8 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	private No fim;
 	private int tamanho;
 	
-	public ListaOrdenadaComNoDescritor(No inicio) {
-		this.inicio = inicio;
+	public ListaOrdenadaComNoDescritor() {
+		this.inicio = null;
 	}
 
 	public No getInicio() {
@@ -86,7 +86,6 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 
 	@Override
 	public void imprimir() {
-		
 	        No atual = inicio;
 	        while (atual != null) {
 	            System.out.print(atual.getDado() + " ");
