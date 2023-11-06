@@ -112,6 +112,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	public void imprimirTamanho() {
 		System.out.println("TAMANHO: " + getTamanho() + " ELEMENTOS");
 	}
+	
 	public void imprimirFim() {
 		System.out.println("FINAL: " + getFim().getDado());
 	}
