@@ -19,22 +19,23 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 		return tamanho;
 	}
 
-	public int buscar(int elemento) {
+	public No buscar(int index) {
 		No auxiliar = inicio;
 		int contador = 0;
-		while (auxiliar.getProximo() != null) {
-			if (auxiliar.getDado() == elemento) {
-				return contador;
+		while (auxiliar != null) {
+			if (contador == index) {
+				return auxiliar;
 			}
+			auxiliar = auxiliar.getProximo();
 			contador++;
 		}
-		return -1;
+		return null;
 	}
 
 	public void inserirOrdenado(int novoDado) {
         No novoNo = new No(novoDado);
 
-        if (inicio == null || inicio.getDado() >= novoNo.getDado()) {//Se o inicio for maior que o dado, insere depois do inicio
+        if (this.isVazia() || inicio.getDado() >= novoNo.getDado()) {//Se o inicio for maior que o dado, insere depois do inicio
         	
             novoNo.setProximo(inicio);
             inicio = novoNo;
@@ -51,12 +52,15 @@ public class ListaOrdenadaComNoDescritor implements Lista {
             novoNo.setProximo(atual.getProximo());
             atual.setProximo(novoNo);
         }
+        this.tamanho ++;
+        this.fim = this.buscar(tamanho - 1);
     }
 
 	@Override
 	public void removerDoInicio() {
 		No auxiliar = inicio.getProximo();
 		inicio = auxiliar;
+		this.tamanho--;
 	}
 
 	@Override
@@ -65,20 +69,26 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 		while(auxiliar != null) {
 			if(auxiliar.getProximo().getProximo() == null) {
 				auxiliar.setProximo(null);
+				this.fim = auxiliar;
 			}
 			auxiliar = auxiliar.getProximo();
 		}
+		this.tamanho--;
 	}
 
 	@Override
 	public void remover(int indice) {
 		No auxiliar = inicio;
 		for(int i = 0; i <= indice; i++) {
-			if(i+1 == indice) {
-				auxiliar.setProximo(auxiliar.getProximo().getProximo());
+			if(auxiliar != null) {
+				if(i+1 == indice) {
+					auxiliar.setProximo(auxiliar.getProximo().getProximo());
+				}
+				auxiliar = auxiliar.getProximo();
 			}
-			auxiliar = auxiliar.getProximo();
 		}
+		this.tamanho--;
+		this.fim = this.buscar(tamanho - 1);
 	}
 
 	@Override

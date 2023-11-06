@@ -1,6 +1,6 @@
 public interface Lista {
 	
-	public int buscar(int elemento);
+	public No buscar(int index);
 	
 	public void inserirOrdenado(int elemento);
 	
