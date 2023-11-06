@@ -1,6 +1,5 @@
 
 public class ListaOrdenadaComNoDescritor implements Lista {
-	
 	private No inicio;
 	private No fim;
 	private int tamanho;
@@ -94,5 +93,4 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	        System.out.println();
 	}
 
-	
 }
