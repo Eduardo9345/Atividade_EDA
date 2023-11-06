@@ -12,7 +12,7 @@ public class Main {
 		lista.inserirOrdenado(7);
 		lista.removerDoFinal();
 		lista.imprimir();
-		lista.remover(4);
+		lista.remover(3);
 	
 		lista.imprimir();
 	}
