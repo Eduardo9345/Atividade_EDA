@@ -89,8 +89,4 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	        }
 	        System.out.println();
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> fdc56c7fbdcca51dc5a189b291d597ba1b63016e
 }
