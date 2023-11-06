@@ -69,8 +69,13 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 
 	@Override
 	public void remover(int indice) {
-		// TODO Auto-generated method stub
-		
+		No auxiliar = inicio;
+		for(int i = 0; i <= indice; i++) {
+			if(i+1 == indice) {
+				auxiliar.setProximo(auxiliar.getProximo().getProximo());
+			}
+			auxiliar = auxiliar.getProximo();
+		}
 	}
 
 	@Override

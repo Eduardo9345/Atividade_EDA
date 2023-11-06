@@ -11,8 +11,9 @@ public class Main {
 		lista.inserirOrdenado(15);
 		lista.inserirOrdenado(7);
 		lista.removerDoFinal();
-		
-		
+		lista.imprimir();
+		lista.remover(4);
+	
 		lista.imprimir();
 	}
 
