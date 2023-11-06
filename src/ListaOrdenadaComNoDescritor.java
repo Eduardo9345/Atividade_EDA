@@ -32,28 +32,6 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 		}
 		return -1;
 	}
-	
-//	public void buscar(int index) {
-//		No auxiliar = inicio;
-//
-//	}
-
-	@Override
-	public void inserirNoFinal(int elemento) {
-		// TODO Auto-generated method stub
-		
-	}
-
-//	@Override
-//	public void inserirNoInicio(int elemento) {
-//		No no = new No(elemento);
-//		
-//		if(this.isVazia()) {
-//			inicio = no;
-//		} else {
-//			
-//		}
-//	}
 
 	public void inserirOrdenado(int novoDado) {
         No novoNo = new No(novoDado);
@@ -74,14 +52,19 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 
 	@Override
 	public void removerDoInicio() {
-		// TODO Auto-generated method stub
-		
+		No auxiliar = inicio.getProximo();
+		inicio = auxiliar;
 	}
 
 	@Override
 	public void removerDoFinal() {
-		// TODO Auto-generated method stub
-		
+		No auxiliar = inicio;
+		while(auxiliar != null) {
+			if(auxiliar.getProximo().getProximo() == null) {
+				auxiliar.setProximo(null);
+			}
+			auxiliar = auxiliar.getProximo();
+		}
 	}
 
 	@Override

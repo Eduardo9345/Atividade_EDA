@@ -10,6 +10,7 @@ public class Main {
 		lista.inserirOrdenado(16);
 		lista.inserirOrdenado(15);
 		lista.inserirOrdenado(7);
+		lista.removerDoFinal();
 		
 		
 		lista.imprimir();
