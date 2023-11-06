@@ -101,7 +101,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	@Override
 	public void imprimir() {
 	        No atual = inicio;
-	        System.out.print("INICIO==> ");
+	        System.out.print("INICIO===> ");
 	        while (atual != null) {
 	            System.out.print(atual.getDado() + " ");
 	            atual = atual.getProximo();
@@ -110,7 +110,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	}
 	
 	public void imprimirTamanho() {
-		System.out.println("TAMANHO: " + getTamanho());
+		System.out.println("TAMANHO: " + getTamanho() + " ELEMENTOS");
 	}
 	public void imprimirFim() {
 		System.out.println("FINAL: " + getFim().getDado());

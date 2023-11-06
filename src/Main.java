@@ -2,6 +2,7 @@ public class Main {
 	public static void main(String[] args) {
 		ListaOrdenadaComNoDescritor  lista = new ListaOrdenadaComNoDescritor();
 		
+		//Configuração
 		int[] sequencia1 = {17, 83, 90, 65, 40, 13};
 		int[] sequencia2 = {50, 17, 48, 22, 39, 18};
 		
@@ -10,14 +11,24 @@ public class Main {
 		
 		lista.imprimir();
 		
+		//Inserção
+		lista.inserirOrdenado(78);
+		lista.imprimir();
+		
+		//Remoção do final
 		lista.removerDoFinal();
 		lista.imprimir();
 		
-		lista.remover(3);
+		//Remover do inicio
+		lista.removerDoInicio();
 		lista.imprimir();
+		
+		//Remover com indice
 		lista.remover(8);
 		lista.imprimir();
 		
+		
+		//Parte Descritiva
 		lista.imprimirTamanho();
 		lista.imprimirFim();
 	}
