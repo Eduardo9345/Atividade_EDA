@@ -34,14 +34,20 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	public void inserirOrdenado(int novoDado) {
         No novoNo = new No(novoDado);
 
-        if (inicio == null || inicio.getDado() >= novoNo.getDado()) {
+        if (inicio == null || inicio.getDado() >= novoNo.getDado()) {//Se o inicio for maior que o dado, insere depois do inicio
+        	
             novoNo.setProximo(inicio);
             inicio = novoNo;
-        } else {
+            
+        } else {/*se não, testa se o próximo é nulo. Se não for, testa se o próximo é menor do que o novoDado*/
+        	
             No atual = inicio;
+            
             while (atual.getProximo() != null && atual.getProximo().getDado() < novoNo.getDado()) {
                 atual = atual.getProximo();
             }
+            
+            //Se o próximo for maior que o dado, inserimos o novo dado antes do próximo e depois do atual. Assim, ordenando a lista
             novoNo.setProximo(atual.getProximo());
             atual.setProximo(novoNo);
         }
