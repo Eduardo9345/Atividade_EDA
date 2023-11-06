@@ -27,7 +27,6 @@ public class Main {
 		lista.remover(8);
 		lista.imprimir();
 		
-		
 		//Parte Descritiva
 		lista.imprimirTamanho();
 		lista.imprimirFim();
