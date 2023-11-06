@@ -17,7 +17,6 @@ public class Main {
 		lista.imprimir();
 		lista.remover(8);
 		
-		lista.imprimir();
 		System.out.println(lista.getTamanho());
 		System.out.println(lista.getFim().getDado());
 	}

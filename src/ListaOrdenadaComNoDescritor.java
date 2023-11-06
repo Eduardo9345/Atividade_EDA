@@ -2,7 +2,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	private No inicio;
 	private No fim;
 	private int tamanho;
-
+	
 	public ListaOrdenadaComNoDescritor() {
 		this.inicio = null;
 	}
@@ -14,7 +14,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	public No getFim() {
 		return fim;
 	}
-
+	
 	public int getTamanho() {
 		return tamanho;
 	}
@@ -80,7 +80,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	public void remover(int indice) {
 		No auxiliar = inicio;
 		for(int i = 0; i <= indice; i++) {
-			if(auxiliar != null) {
+			if(auxiliar != null) { 
 				if(i+1 == indice) {
 					auxiliar.setProximo(auxiliar.getProximo().getProximo());
 				}
