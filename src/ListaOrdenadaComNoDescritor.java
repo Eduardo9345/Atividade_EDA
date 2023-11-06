@@ -1,4 +1,3 @@
-
 public class ListaOrdenadaComNoDescritor implements Lista {
 	
 	private No inicio;
@@ -21,7 +20,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 		return tamanho;
 	}
 
-	public int buscarIndex(int elemento) {
+	public int buscar(int elemento) {
 		No auxiliar = inicio;
 		int contador = 0;
 		while (auxiliar.getProximo() != null) {
@@ -69,25 +68,23 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 
 	@Override
 	public void remover(int indice) {
-		// TODO Auto-generated method stub
-		
+		No auxiliar = inicio;
+		for(int i = 0; i <= indice; i++) {
+			if(i+1 == indice) {
+				auxiliar.setProximo(auxiliar.getProximo().getProximo());
+			}
+			auxiliar = auxiliar.getProximo();
+		}
 	}
 
-	@Override
-	public boolean isCheia() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 	@Override
 	public boolean isVazia() {
-		// TODO Auto-generated method stub
-		return false;
+		return inicio == null;
 	}
 
 	@Override
 	public void imprimir() {
-		
 	        No atual = inicio;
 	        while (atual != null) {
 	            System.out.print(atual.getDado() + " ");
@@ -96,16 +93,5 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	        System.out.println();
 	}
 
-	@Override
-	public void inserirNoInicio(int elemento) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void inserir(int elemento, int indice) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }
