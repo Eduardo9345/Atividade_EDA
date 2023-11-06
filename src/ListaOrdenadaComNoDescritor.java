@@ -1,4 +1,3 @@
-
 public class ListaOrdenadaComNoDescritor implements Lista {
 	private No inicio;
 	private No fim;
@@ -48,7 +47,6 @@ public class ListaOrdenadaComNoDescritor implements Lista {
         }
     }
 
-
 	@Override
 	public void removerDoInicio() {
 		No auxiliar = inicio.getProximo();
@@ -77,7 +75,6 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 		}
 	}
 
-
 	@Override
 	public boolean isVazia() {
 		return inicio == null;
@@ -92,5 +89,8 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	        }
 	        System.out.println();
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fdc56c7fbdcca51dc5a189b291d597ba1b63016e
 }

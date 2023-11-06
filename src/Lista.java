@@ -1,4 +1,3 @@
-
 public interface Lista {
 	
 	public int buscar(int elemento);
