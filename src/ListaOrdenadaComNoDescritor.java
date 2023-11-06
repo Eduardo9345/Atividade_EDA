@@ -4,8 +4,8 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	private No fim;
 	private int tamanho;
 	
-	public ListaOrdenadaComNoDescritor(No inicio) {
-		this.inicio = inicio;
+	public ListaOrdenadaComNoDescritor() {
+		this.inicio = null;
 	}
 
 	public No getInicio() {
