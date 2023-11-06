@@ -2,7 +2,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	private No inicio;
 	private No fim;
 	private int tamanho;
-	
+
 	public ListaOrdenadaComNoDescritor() {
 		this.inicio = null;
 	}
@@ -14,7 +14,7 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	public No getFim() {
 		return fim;
 	}
-	
+
 	public int getTamanho() {
 		return tamanho;
 	}
