@@ -16,10 +16,12 @@ public class Main {
 		lista.remover(3);
 		lista.imprimir();
 		lista.remover(8);
+		lista.imprimir();
 		
-		System.out.println(lista.getTamanho());
-		System.out.println(lista.getFim().getDado());
+		lista.imprimirTamanho();
+		lista.imprimirFim();
 	}
+	
 	public static void addLista(ListaOrdenadaComNoDescritor l, int[] v) {
 		for(int i : v) {
 			l.inserirOrdenado(i);

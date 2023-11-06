@@ -35,7 +35,8 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	public void inserirOrdenado(int novoDado) {
         No novoNo = new No(novoDado);
 
-        if (this.isVazia() || inicio.getDado() >= novoNo.getDado()) {//Se o inicio for maior que o dado, insere depois do inicio
+        if (this.isVazia() || 
+        	inicio.getDado() >= novoNo.getDado()) {//Se o inicio for maior que o dado, insere depois do inicio
         	
             novoNo.setProximo(inicio);
             inicio = novoNo;
@@ -48,7 +49,8 @@ public class ListaOrdenadaComNoDescritor implements Lista {
                 atual = atual.getProximo();
             }
             
-            //Se o próximo for maior que o dado, inserimos o novo dado antes do próximo e depois do atual. Assim, ordenando a lista
+            //Se o próximo for maior que o dado, inserimos o novo dado antes do próximo e depois do atual. 
+            //Assim, ordenando a lista
             novoNo.setProximo(atual.getProximo());
             atual.setProximo(novoNo);
         }
@@ -99,10 +101,18 @@ public class ListaOrdenadaComNoDescritor implements Lista {
 	@Override
 	public void imprimir() {
 	        No atual = inicio;
+	        System.out.print("INICIO==> ");
 	        while (atual != null) {
 	            System.out.print(atual.getDado() + " ");
 	            atual = atual.getProximo();
 	        }
-	        System.out.println();
+	        System.out.println("<===FIM");
+	}
+	
+	public void imprimirTamanho() {
+		System.out.println("TAMANHO: " + getTamanho());
+	}
+	public void imprimirFim() {
+		System.out.println("FINAL: " + getFim().getDado());
 	}
 }
