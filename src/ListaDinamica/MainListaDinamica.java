@@ -1,4 +1,7 @@
-public class Main {
+package ListaDinamica;
+
+public class MainListaDinamica {
+	
 	public static void main(String[] args) {
 		ListaOrdenadaComNoDescritor  lista = new ListaOrdenadaComNoDescritor();
 		

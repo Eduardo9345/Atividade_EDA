@@ -1,3 +1,5 @@
+package ListaDinamica;
+
 public class ListaOrdenadaComNoDescritor implements Lista {
 	private No inicio;
 	private No fim;

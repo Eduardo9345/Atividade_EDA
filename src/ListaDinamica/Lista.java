@@ -1,3 +1,5 @@
+package ListaDinamica;
+
 public interface Lista {
 	
 	public No buscar(int index);
