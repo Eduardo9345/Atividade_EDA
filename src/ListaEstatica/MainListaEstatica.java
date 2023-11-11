@@ -46,7 +46,7 @@ public class MainListaEstatica {
 		System.out.println("Último elemento: " + listaEstatica.buscarElemento(listaEstatica.quantidadeElementos()));
 		
 	}
-	
+
 	public static void adicionarLista(ListaEstatica listaEstatica, int[] vetor) {
 		for (int v : vetor) {
 			listaEstatica.inserir(v, v);
