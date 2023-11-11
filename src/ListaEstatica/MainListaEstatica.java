@@ -39,6 +39,7 @@ public class MainListaEstatica {
 		listaEstatica.imprimirLista();
 		
 		// Impressão
+		System.out.println("Agora que terminou...");
 		System.out.println("Lista Final");
 		listaEstatica.imprimirLista();
 		System.out.println("Tamanho: " + listaEstatica.quantidadeElementos());
