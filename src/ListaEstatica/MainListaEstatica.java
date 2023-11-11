@@ -18,15 +18,6 @@ public class MainListaEstatica {
 		
 		listaEstatica.imprimirLista();
 		
-		// Inserção
-		listaEstatica.inserirNoInicio(15);
-		listaEstatica.imprimirLista();
-		
-		listaEstatica.inserirNoFinal(90);
-		listaEstatica.imprimirLista();
-		
-		listaEstatica.inserir(65, 4);
-		listaEstatica.imprimirLista();
 		
 		// Remoção
 		listaEstatica.removerDoInicio();
@@ -38,19 +29,29 @@ public class MainListaEstatica {
 		listaEstatica.remover(5);
 		listaEstatica.imprimirLista();
 		
+		// Inserção
+		listaEstatica.inserirNoInicio(15);
+		listaEstatica.imprimirLista();
+		
+		listaEstatica.inserirNoFinal(90);
+		listaEstatica.imprimirLista();
+		
+		listaEstatica.inserir(65, 4);
+		listaEstatica.imprimirLista();
+		
 		// Impressão
-		System.out.println("Agora que terminou...");
+		System.out.println();
 		System.out.println("Lista Final");
 		listaEstatica.imprimirLista();
 		System.out.println("Tamanho: " + listaEstatica.quantidadeElementos());
-		System.out.println("Primeiro Elemento: " + listaEstatica.buscarIndiceDoElemento(listaEstatica.quantidadeElementos()));
-		System.out.println("Último elemento: " + listaEstatica.buscarIndiceDoElemento(listaEstatica.quantidadeElementos()));
+		System.out.println("Primeiro Elemento: " + listaEstatica.buscarElementoPeloIndice(0));
+		System.out.println("Último elemento: " + listaEstatica.buscarElementoPeloIndice(listaEstatica.quantidadeElementos() - 1));
 		
 	}
 
 	public static void adicionarLista(ListaEstatica listaEstatica, int[] vetor) throws ListaCheiaException {
-		for (int i = 0; i < listaEstatica.getTamanho(); i++) {
-			listaEstatica.inserir(vetor[i], i);
+		for(int i : vetor) {
+			listaEstatica.inserirNoFinal(i);
 		}
 	}
 

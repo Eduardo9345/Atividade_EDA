@@ -19,7 +19,7 @@ public class ListaEstatica implements Lista {
         }
         
         for(int i = quantidade; i > 0; i--) {
-        	array[quantidade] = array[quantidade - 1];
+        	array[i] = array[i - 1];
         }
         
         array[0] = elemento;
@@ -42,7 +42,7 @@ public class ListaEstatica implements Lista {
     		inserirNoFinal(elemento);
     	} else {
 	    	for (int i = quantidade; i > indice; i--) {
-	    		array[quantidade] = array[quantidade - 1];
+	    		array[i] = array[i - 1];
 	    	}
 	    	
 	    	array[indice] = elemento;
@@ -56,7 +56,7 @@ public class ListaEstatica implements Lista {
         	throw new ListaVaziaException();
         }
         int lixo = array[0];
-        for (int i = 0; i < quantidade; i++) {
+        for (int i = 0; i < quantidade - 1; i++) {
 			array[i] = array[i + 1];
 		}
         quantidade--;
@@ -82,7 +82,7 @@ public class ListaEstatica implements Lista {
     	
     	int lixo = array[indice];
     	
-    	for(int i = indice; i < quantidade; i--) {
+    	for(int i = indice; i < quantidade; i++) {
     		array[i] = array[i+1];
     	}
     	quantidade--;
@@ -93,8 +93,8 @@ public class ListaEstatica implements Lista {
     @Override
     public void imprimirLista() {
     	System.out.print("INICIO ==>");
-    	for (int i : array) {
-    		System.out.print(i + " ");
+    	for (int i = 0; i < quantidade; i++) {
+    		System.out.print(array[i] + " ");
     	}
     	System.out.println("<== FINAL");
     }
