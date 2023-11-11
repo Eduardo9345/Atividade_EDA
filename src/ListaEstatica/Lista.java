@@ -8,7 +8,7 @@ public interface Lista {
     
     public void inserirNoFinal(int elemento) throws ListaCheiaException;
     
-    public void inserir(int elemento, int indice);
+    public void inserir(int elemento, int indice) throws ListaCheiaException;
     
     public int removerDoInicio();
     

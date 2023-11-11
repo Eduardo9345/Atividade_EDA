@@ -47,7 +47,7 @@ public class MainListaEstatica {
 		
 	}
 
-	public static void adicionarLista(ListaEstatica listaEstatica, int[] vetor) {
+	public static void adicionarLista(ListaEstatica listaEstatica, int[] vetor) throws ListaCheiaException {
 		for (int i = 0; i < listaEstatica.getTamanho(); i++) {
 			listaEstatica.inserir(vetor[i], i);
 		}
