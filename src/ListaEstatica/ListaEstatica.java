@@ -1,6 +1,7 @@
 package ListaEstatica;
 
 import Excecoes.ListaCheiaException;
+import Excecoes.ListaVaziaException;
 
 public class ListaEstatica implements Lista {
 	
@@ -55,17 +56,39 @@ public class ListaEstatica implements Lista {
     }
 
     @Override
-    public int removerDoFinal() {
-        return 0;
+    public int removerDoFinal() throws ListaVaziaException {
+    	if(this.isVazia()) {
+    		throw new ListaVaziaException();
+    	}
+    	
+    	int lixo = array[quantidade - 1];
+        quantidade--;
+        return lixo;
     }
 
     @Override
-    public int remover(int indice) {
-        return 0;
+    public int remover(int indice) throws ListaVaziaException {
+    	if(this.isVazia()) {
+    		throw new ListaVaziaException();
+    	}
+    	
+    	int lixo = array[indice];
+    	
+    	for(int i = indice; i < quantidade; i--) {
+    		array[i] = array[i+1];
+    	}
+    	quantidade--;
+    	
+    	return lixo;
     }
 
     @Override
     public void imprimirLista() {
+    	System.out.print("INICIO ==>");
+    	for (int i : array) {
+    		System.out.print(i + " ");
+    	}
+    	System.out.println("<== FINAL");
     }
 
     @Override
@@ -75,7 +98,7 @@ public class ListaEstatica implements Lista {
 
     @Override
     public boolean isVazia() {
-        return false;
+        return quantidade == 0;
     }
 
     @Override

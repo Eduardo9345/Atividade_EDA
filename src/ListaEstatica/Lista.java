@@ -1,6 +1,7 @@
 package ListaEstatica;
 
 import Excecoes.ListaCheiaException;
+import Excecoes.ListaVaziaException;
 
 public interface Lista {
 
@@ -12,9 +13,9 @@ public interface Lista {
     
     public int removerDoInicio();
     
-    public int removerDoFinal();
+    public int removerDoFinal() throws ListaVaziaException;
     
-    public int remover(int indice);
+    public int remover(int indice) throws ListaVaziaException;
 
     public void imprimirLista();
 
