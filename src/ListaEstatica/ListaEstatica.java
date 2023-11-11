@@ -51,8 +51,16 @@ public class ListaEstatica implements Lista {
     }
 
     @Override
-    public int removerDoInicio() {
-        return 0;
+    public int removerDoInicio() throws ListaVaziaException {
+        if(isVazia()) {
+        	throw new ListaVaziaException();
+        }
+        int lixo = array[0];
+        for (int i = 0; i < quantidade; i++) {
+			array[i] = array[i + 1];
+		}
+        quantidade--;
+        return lixo;
     }
 
     @Override
@@ -102,11 +110,16 @@ public class ListaEstatica implements Lista {
     }
 
     @Override
-    public int buscarElemento(int elemento) {
-        return 0;
+    public int buscarIndiceDoElemento(int elemento) {
+        for (int i = 0; i < quantidade; i++) {
+        	if (array[i] == elemento) {
+        		return i;
+        	}
+        }
+        return -1;
     }
     
-    public int buscarPeloIndex(int index) {
+    public int buscarElementoPeloIndice(int index) {
     	for(int i = 0; i < quantidade; i++) {
     		if(i == index) {
     			return array[index];

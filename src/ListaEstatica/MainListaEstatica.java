@@ -43,8 +43,8 @@ public class MainListaEstatica {
 		System.out.println("Lista Final");
 		listaEstatica.imprimirLista();
 		System.out.println("Tamanho: " + listaEstatica.quantidadeElementos());
-		System.out.println("Primeiro Elemento: " + listaEstatica.buscarElemento(listaEstatica.quantidadeElementos()));
-		System.out.println("Último elemento: " + listaEstatica.buscarElemento(listaEstatica.quantidadeElementos()));
+		System.out.println("Primeiro Elemento: " + listaEstatica.buscarIndiceDoElemento(listaEstatica.quantidadeElementos()));
+		System.out.println("Último elemento: " + listaEstatica.buscarIndiceDoElemento(listaEstatica.quantidadeElementos()));
 		
 	}
 

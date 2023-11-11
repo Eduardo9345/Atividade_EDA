@@ -11,7 +11,7 @@ public interface Lista {
     
     public void inserir(int elemento, int indice) throws ListaCheiaException;
     
-    public int removerDoInicio();
+    public int removerDoInicio() throws ListaVaziaException;
     
     public int removerDoFinal() throws ListaVaziaException;
     
@@ -23,7 +23,7 @@ public interface Lista {
 
     public boolean isVazia();
 
-    public int buscarElemento(int elemento);
+    public int buscarIndiceDoElemento(int elemento);
 
     public int quantidadeElementos();
 
