@@ -2,8 +2,8 @@ package Excecoes;
 
 public class ListaCheiaException extends Exception {
 	
-	public ListaCheiaException(String excecao) {
-		super(excecao);
+	public ListaCheiaException() {
+		super("A lista está cheia");
 	}
 
 }

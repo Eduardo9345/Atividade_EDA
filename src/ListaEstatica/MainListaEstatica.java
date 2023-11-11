@@ -48,8 +48,8 @@ public class MainListaEstatica {
 	}
 
 	public static void adicionarLista(ListaEstatica listaEstatica, int[] vetor) {
-		for (int v : vetor) {
-			listaEstatica.inserir(v, v);
+		for (int i = 0; i < listaEstatica.getTamanho(); i++) {
+			listaEstatica.inserir(vetor[i], i);
 		}
 	}
 

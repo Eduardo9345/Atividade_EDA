@@ -12,14 +12,26 @@ public class ListaEstatica implements Lista {
 	}
 
     @Override
-    public void inserirNoInicio(int elemento) {
+    public void inserirNoInicio(int elemento) throws ListaCheiaException {
+        if(isCheia()) {
+        	throw new ListaCheiaException();
+        }
         
+        for(int i = 0; i < quantidade; i++) {
+        	int aux = array[i];
+        	
+        	if(i == 0) {
+        		array[i] = elemento;
+        	}
+        	
+        	array[i+1] = aux;
+        }
     }
 
     @Override
     public void inserirNoFinal(int elemento) throws ListaCheiaException {
     	if (isCheia()) {
-    		throw new ListaCheiaException("A lista está cheia!");
+    		throw new ListaCheiaException();
     	}
     	array[quantidade++] = elemento;
     }
@@ -50,7 +62,7 @@ public class ListaEstatica implements Lista {
 
     @Override
     public boolean isCheia() {
-        return quantidade == array.length;
+        return quantidade == this.getTamanho();
     }
 
     @Override
@@ -65,7 +77,11 @@ public class ListaEstatica implements Lista {
 
     @Override
     public int quantidadeElementos() {
-        return 0;
+        return quantidade;
+    }
+    
+    public int getTamanho() {
+    	return array.length;
     }
     
 }
