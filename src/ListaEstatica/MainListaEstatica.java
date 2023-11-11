@@ -1,10 +1,13 @@
 package ListaEstatica;
 
+import Excecoes.ListaCheiaException;
+import Excecoes.ListaVaziaException;
+
 public class MainListaEstatica {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ListaCheiaException, ListaVaziaException {
 		
-		ListaEstatica listaEstatica = new ListaEstatica();
+		ListaEstatica listaEstatica = new ListaEstatica(12);
 
 		// Sequências
 		int[] sequencia_1 = {7, 60, 45, 19, 28, 37};
@@ -36,7 +39,11 @@ public class MainListaEstatica {
 		listaEstatica.imprimirLista();
 		
 		// Impressão
+		System.out.println("Lista Final");
 		listaEstatica.imprimirLista();
+		System.out.println("Tamanho: " + listaEstatica.quantidadeElementos());
+		System.out.println("Primeiro Elemento: " + listaEstatica.buscarElemento(listaEstatica.quantidadeElementos()));
+		System.out.println("Último elemento: " + listaEstatica.buscarElemento(listaEstatica.quantidadeElementos()));
 		
 	}
 	

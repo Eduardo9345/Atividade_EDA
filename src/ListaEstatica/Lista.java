@@ -1,10 +1,12 @@
 package ListaEstatica;
 
+import Excecoes.ListaCheiaException;
+
 public interface Lista {
 
     public void inserirNoInicio(int elemento);
     
-    public void inserirNoFinal(int elemento);
+    public void inserirNoFinal(int elemento) throws ListaCheiaException;
     
     public void inserir(int elemento, int indice);
     

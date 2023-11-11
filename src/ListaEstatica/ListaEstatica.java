@@ -1,6 +1,15 @@
 package ListaEstatica;
 
+import Excecoes.ListaCheiaException;
+
 public class ListaEstatica implements Lista {
+	
+	private int array[];
+	private int quantidade;
+	
+	public ListaEstatica(int tamanho) {
+		array = new int[tamanho];
+	}
 
     @Override
     public void inserirNoInicio(int elemento) {
@@ -8,8 +17,11 @@ public class ListaEstatica implements Lista {
     }
 
     @Override
-    public void inserirNoFinal(int elemento) {
-    	
+    public void inserirNoFinal(int elemento) throws ListaCheiaException {
+    	if (isCheia()) {
+    		throw new ListaCheiaException("A lista está cheia!");
+    	}
+    	array[quantidade++] = elemento;
     }
 
     @Override
@@ -38,7 +50,7 @@ public class ListaEstatica implements Lista {
 
     @Override
     public boolean isCheia() {
-        return false;
+        return quantidade == array.length;
     }
 
     @Override
