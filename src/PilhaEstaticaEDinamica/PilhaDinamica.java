@@ -1,50 +1,63 @@
 package PilhaEstaticaEDinamica;
 
-import Excecoes.PilhaCheiaException;
 import Excecoes.PilhaVaziaException;
 
-public class PilhaDinamica implements Pilha{
+public class PilhaDinamica implements Pilha {
+	
+	private PilhaNo topo;
+	private int quantidade;
 	
 	@Override
-	public void push(int elemento) throws PilhaCheiaException {
-		// TODO Auto-generated method stub
-		
+	public void push(int elemento) {
+		PilhaNo no = new PilhaNo(elemento);
+		no.proximo = topo;
+		topo = no;
+		quantidade++;
 	}
 
 	@Override
 	public int pop() throws PilhaVaziaException {
-		// TODO Auto-generated method stub
-		return 0;
+		if (isVazia()) {
+			throw new PilhaVaziaException();
+		}
+		PilhaNo lixo = topo;
+		topo = topo.proximo;
+		quantidade--;
+		return lixo.dado;
 	}
 
 	@Override
 	public int getTopo() throws PilhaVaziaException {
-		// TODO Auto-generated method stub
-		return 0;
+		if (isVazia()) {
+			throw new PilhaVaziaException();
+		}
+		return topo.dado;
 	}
 
 	@Override
 	public boolean isVazia() {
-		// TODO Auto-generated method stub
-		return false;
+		return topo == null;
 	}
 
 	@Override
 	public boolean isCheia() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void imprimir() {
-		// TODO Auto-generated method stub
-		
+		System.out.print("INICIO ==> ");
+		PilhaNo atual = topo;
+		while (atual != null) {
+			System.out.print(atual.dado + " ");
+			atual = atual.proximo;
+		}
+		System.out.println("<== FIM");
 	}
 
 	@Override
 	public int getQuantidade() {
-		// TODO Auto-generated method stub
-		return 0;
+		return quantidade;
 	}
 	
 }
