@@ -4,7 +4,7 @@ import Excecoes.PilhaCheiaException;
 import Excecoes.PilhaVaziaException;
 
 public class PilhaDinamica implements Pilha{
-
+	
 	@Override
 	public void push(int elemento) throws PilhaCheiaException {
 		// TODO Auto-generated method stub
