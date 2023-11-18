@@ -1,4 +1,4 @@
-package Pilha;
+package PilhaEstaticaEDinamica;
 
 import Excecoes.PilhaCheiaException;
 import Excecoes.PilhaVaziaException;

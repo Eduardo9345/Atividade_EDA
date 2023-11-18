@@ -1,8 +1,7 @@
-package Pilha;
+package PilhaEstaticaEDinamica;
 
 import Excecoes.PilhaCheiaException;
 import Excecoes.PilhaVaziaException;
-import ListaEstatica.ListaEstatica;
 
 public class MainPilha {
     public static void main(String[] args) throws PilhaCheiaException, PilhaVaziaException {
