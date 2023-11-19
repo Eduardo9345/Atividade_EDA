@@ -34,7 +34,7 @@ public class MainListaEstatica {
 		
 		listaEstatica.inserirNoFinal(90);
 		listaEstatica.imprimirLista();
-
+		
 		listaEstatica.inserir(65, 4);
 		listaEstatica.imprimirLista();
 		
