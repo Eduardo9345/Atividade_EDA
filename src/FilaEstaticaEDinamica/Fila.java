@@ -5,20 +5,20 @@ import Excecoes.FilaVaziaException;
 
 public interface Fila {
 
-	public void enfileirar(int elemento) throws FilaCheiaException;
+	public void enfileirar(int e) throws FilaCheiaException;
 	
 	public int desenfileirar() throws FilaVaziaException;
-	
-	public int tamanhoFila();
 	
 	public int ponteiroInicio();
 	
 	public int ponteiroFim();
 	
-	public boolean isCheia();
+	public void imprimir();
+	
+	public int quantidade();
 	
 	public boolean isVazia();
 	
-	public void imprimirFila();
+	public boolean isCheia();
 	
 }

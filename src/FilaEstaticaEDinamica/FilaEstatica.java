@@ -37,7 +37,7 @@ public class FilaEstatica implements Fila {
 	}
 
 	@Override
-	public int tamanhoFila() {
+	public int quantidade() {
 		return quantidade;
 	}
 
@@ -62,7 +62,7 @@ public class FilaEstatica implements Fila {
 	}
 
 	@Override
-	public void imprimirFila() {
+	public void imprimir() {
 		System.out.print("INÍCIO ==> ");
 		for (int a : array) {
 			System.out.print(a + " ");
