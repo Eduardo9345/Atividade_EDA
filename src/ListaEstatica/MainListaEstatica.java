@@ -3,9 +3,10 @@ package ListaEstatica;
 import Excecoes.ListaCheiaException;
 import Excecoes.ListaVaziaException;
 
+
 public class MainListaEstatica {
 
-	public static void main(String[] args) throws ListaCheiaException, ListaVaziaException {
+	public static void main(String[] args) throws ListaVaziaException, ListaCheiaException {
 		
 		ListaEstatica listaEstatica = new ListaEstatica(12);
 

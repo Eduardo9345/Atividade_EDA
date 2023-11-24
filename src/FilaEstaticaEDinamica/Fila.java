@@ -2,7 +2,7 @@ package FilaEstaticaEDinamica;
 
 public interface Fila {
 	
-	public void enfileirar() throws FilaCheiaException;
+	public void enfileirar(int e) throws FilaCheiaException;
 	public int desenfileirar() throws FilaVaziaException;
 	public void imprimir();
 	public int quantidade();
