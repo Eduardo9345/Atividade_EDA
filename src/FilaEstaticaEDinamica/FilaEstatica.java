@@ -18,7 +18,8 @@ public class FilaEstatica implements Fila {
 		if (isCheia()) {
 			throw new FilaCheiaException();
 		}
-		array[++inicio] = elemento;
+		array[quantidade] = elemento;
+		inicio++;
 		quantidade++;
 	}
 
@@ -27,8 +28,8 @@ public class FilaEstatica implements Fila {
 		if (isVazia()) {
 			throw new FilaVaziaException();
 		}
-		int lixo = array[array.length - 1];
-		for (int i = 0; i < array.length - 1; i++) {
+		int lixo = array[0];
+		for (int i = 0; i < quantidade-1; i++) {
 			array[i] = array[i + 1];
 		}
 		inicio--;
@@ -48,7 +49,7 @@ public class FilaEstatica implements Fila {
 
 	@Override
 	public int ponteiroFim() {
-		return array[array.length - 1];
+		return array[inicio];
 	}
 
 	@Override

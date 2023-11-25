@@ -7,7 +7,7 @@ public class MainFila {
 
 	public static void main(String[] args) throws FilaCheiaException, FilaVaziaException {
 
-		Fila fila = new FilaDinamica();
+		Fila fila = new FilaEstatica(12);
 		
 		int[] sequencia1 = {17, 83, 90, 65, 40, 13};
 		int[] sequencia2 = {50, 17, 48, 22, 39, 18};
@@ -22,15 +22,15 @@ public class MainFila {
 
 		fila.enfileirar(12);
 		fila.imprimir();
-		
-		fila.desenfileirar();
-		fila.imprimir();
-		
-		fila.enfileirar(34);
-		fila.imprimir();
-		
-		fila.desenfileirar();
-		fila.imprimir();
+//		
+//		fila.desenfileirar();
+//		fila.imprimir();
+//		
+//		fila.enfileirar(34);
+//		fila.imprimir();
+//		
+//		fila.desenfileirar();
+//		fila.imprimir();
 		
 		System.out.println("Elemento no inicio: " + fila.ponteiroInicio());
 		System.out.println("Elemento no fim: " + fila.ponteiroFim());
