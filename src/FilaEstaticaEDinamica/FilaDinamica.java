@@ -63,13 +63,11 @@ public class FilaDinamica implements Fila {
 
 	@Override
 	public int ponteiroInicio() {
-		// TODO Auto-generated method stub
 		return inicio.getDado();
 	}
 
 	@Override
 	public int ponteiroFim() {
-		// TODO Auto-generated method stub
 		return fim.getDado();
 	}
 }
