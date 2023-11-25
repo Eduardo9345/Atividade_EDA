@@ -53,7 +53,7 @@ public class FilaEstatica implements Fila {
 
 	@Override
 	public boolean isCheia() {
-		return quantidade == array.length - 1;
+		return quantidade == array.length;
 	}
 
 	@Override
@@ -64,8 +64,8 @@ public class FilaEstatica implements Fila {
 	@Override
 	public void imprimir() {
 		System.out.print("INÍCIO ==> ");
-		for (int a : array) {
-			System.out.print(a + " ");
+		for (int i = 0; i < quantidade; i++) {
+			System.out.print(array[i] + " ");
 		}
 		System.out.println("<== FIM");
 	}

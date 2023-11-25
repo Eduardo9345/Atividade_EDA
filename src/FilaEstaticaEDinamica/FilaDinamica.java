@@ -36,12 +36,12 @@ public class FilaDinamica implements Fila {
 	@Override
 	public void imprimir() {
 		No atual = inicio;
-        System.out.print("INICIO===> ");
+        System.out.print("INICIO ==> ");
         while (atual != null) {
             System.out.print(atual.getDado() + " ");
             atual = atual.getProximo();
         }
-        System.out.println("<===FIM");
+        System.out.println("<== FIM");
 	}
 	
 	@Override
@@ -62,12 +62,12 @@ public class FilaDinamica implements Fila {
 	@Override
 	public int ponteiroInicio() {
 		// TODO Auto-generated method stub
-		return 0;
+		return inicio.getDado();
 	}
 
 	@Override
 	public int ponteiroFim() {
 		// TODO Auto-generated method stub
-		return 0;
+		return fim.getDado();
 	}
 }
