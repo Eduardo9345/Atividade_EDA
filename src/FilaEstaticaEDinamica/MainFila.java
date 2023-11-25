@@ -13,15 +13,21 @@ public class MainFila {
 		addFila(fila, sequencia1);
 		addFila(fila, sequencia2);
   		
-//		fila.imprimir();
-//		
-//		fila.enfileirar(12);
-//		fila.imprimir();
+		fila.imprimir();
+		
+		fila.enfileirar(12);
+		fila.imprimir();
 		
 		fila.desenfileirar();
 		fila.imprimir();
 		
-		System.out.println("Tamanho da fila: " + fila.quantidade());		
+		fila.desenfileirar();
+		fila.imprimir();
+		
+		fila.desenfileirar();
+		fila.imprimir();
+		
+		System.out.println("\nTamanho da fila: " + fila.quantidade());		
 }
 	
 	public static void addFila(Fila l, int[] v) throws FilaCheiaException {
