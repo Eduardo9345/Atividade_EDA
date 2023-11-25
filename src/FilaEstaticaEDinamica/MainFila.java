@@ -6,7 +6,9 @@ import Excecoes.FilaVaziaException;
 public class MainFila {
 
 	public static void main(String[] args) throws FilaCheiaException, FilaVaziaException {
+
 		Fila fila = new FilaDinamica();
+		
 		int[] sequencia1 = {17, 83, 90, 65, 40, 13};
 		int[] sequencia2 = {50, 17, 48, 22, 39, 18};
 		
@@ -17,7 +19,7 @@ public class MainFila {
 		
 		fila.desenfileirar();
 		fila.imprimir();
-		
+
 		fila.enfileirar(12);
 		fila.imprimir();
 		
