@@ -6,9 +6,7 @@ import Excecoes.FilaVaziaException;
 public class MainFila {
 
 	public static void main(String[] args) throws FilaCheiaException, FilaVaziaException {
-		
 		Fila fila = new FilaDinamica();
-		
 		int[] sequencia1 = {17, 83, 90, 65, 40, 13};
 		int[] sequencia2 = {50, 17, 48, 22, 39, 18};
 		
@@ -17,19 +15,24 @@ public class MainFila {
   		
 		fila.imprimir();
 		
+		fila.desenfileirar();
+		fila.imprimir();
+		
 		fila.enfileirar(12);
 		fila.imprimir();
 		
 		fila.desenfileirar();
 		fila.imprimir();
 		
-		fila.desenfileirar();
+		fila.enfileirar(34);
 		fila.imprimir();
 		
 		fila.desenfileirar();
 		fila.imprimir();
 		
-		System.out.println("\nTamanho da fila: " + fila.quantidade());		
+		System.out.println("\nTamanho da fila: " + fila.quantidade());
+		System.out.println("Elemento no inicio: " + fila.ponteiroInicio());
+		System.out.println("Elemento no fim: " + fila.ponteiroFim());
 }
 	
 	public static void addFila(Fila l, int[] v) throws FilaCheiaException {
