@@ -22,16 +22,17 @@ public class MainFila {
 
 		fila.enfileirar(12);
 		fila.imprimir();
-//		
-//		fila.desenfileirar();
-//		fila.imprimir();
-//		
-//		fila.enfileirar(34);
-//		fila.imprimir();
-//		
-//		fila.desenfileirar();
-//		fila.imprimir();
 		
+		fila.desenfileirar();
+		fila.imprimir();
+		
+		fila.enfileirar(34);
+		fila.imprimir();
+		
+		fila.desenfileirar();
+		fila.imprimir();
+		
+		System.out.println();
 		System.out.println("Elemento no inicio: " + fila.ponteiroInicio());
 		System.out.println("Elemento no fim: " + fila.ponteiroFim());
 		System.out.println("\nTamanho da fila: " + fila.quantidade());
