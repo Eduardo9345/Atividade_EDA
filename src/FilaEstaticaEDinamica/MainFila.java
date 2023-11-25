@@ -30,9 +30,9 @@ public class MainFila {
 		fila.desenfileirar();
 		fila.imprimir();
 		
-		System.out.println("\nTamanho da fila: " + fila.quantidade());
 		System.out.println("Elemento no inicio: " + fila.ponteiroInicio());
 		System.out.println("Elemento no fim: " + fila.ponteiroFim());
+		System.out.println("\nTamanho da fila: " + fila.quantidade());
 }
 	
 	public static void addFila(Fila l, int[] v) throws FilaCheiaException {
