@@ -15,11 +15,11 @@ public class FilaDinamica implements Fila {
 		if(fim != null) {
 			fim.setProximo(elemento);
 			fim = fim.getProximo();
-			quantidade++;
 		} else {
 			inicio = elemento;
 			fim = elemento;
 		}
+		quantidade++;
 		
 	}
 	
@@ -30,6 +30,7 @@ public class FilaDinamica implements Fila {
 		}
 		No lixo = inicio;
 		inicio = inicio.getProximo();
+		quantidade--;
 		return lixo.getDado();
 	}
 	
