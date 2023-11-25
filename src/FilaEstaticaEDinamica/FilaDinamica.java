@@ -12,7 +12,8 @@ public class FilaDinamica implements Fila {
 	@Override
 	public void enfileirar( int e) {
 		No elemento = new No(e);
-		if(fim != null) {
+		
+		if(!this.isVazia()) {
 			fim.setProximo(elemento);
 			fim = fim.getProximo();
 		} else {
@@ -52,7 +53,7 @@ public class FilaDinamica implements Fila {
 	
 	@Override
 	public boolean isVazia() {
-		return inicio == null;
+		return inicio == null && fim == null;
 	}
 	
 	@Override
